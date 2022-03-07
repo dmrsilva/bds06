@@ -1,10 +1,14 @@
 package com.devsuperior.movieflix.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import com.devsuperior.movieflix.entities.Review;
 
 public class MovieReviewsDTO {
 
 	private Long id;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String text;
 	private Long movieId;
 	private UserDTO user;
